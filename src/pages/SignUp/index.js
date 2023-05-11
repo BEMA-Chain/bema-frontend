@@ -1,12 +1,12 @@
 import React from "react";
 import {View, Text} from 'react-native';
 
-import { Container } from "./styles";
+import { Container } from "./styled";
 
 function SignUp(){
     return(
         <Container>
-            <Text>Screen Access</Text>
+            <Text>Screen SignUp</Text>
         </Container>
     )
 }
