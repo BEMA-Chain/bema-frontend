@@ -6,23 +6,21 @@ flex: 1;
 
 export const AreaText = styled.View`
 flex: 2;
-background-color: rgba(13, 13, 13, 0.96);
+background-color: #0D0D0D;
 `;
 
 export const Image = styled.Image`
-height: 484px;
+height: 68%;
 width: 100%;
-border-top-right-radius: 20px;
-border-top-left-radius: 20px;
 `;
 
 export const Title = styled.Text`
 color: #FFF6DA;
 font-family: 'SF Pro Text';
 font-style: normal;
-font-size: 20px;
+font-size: 26px;
 text-align: center;
-margin-top: 40px;
+margin-top: 30px;
 `;
 
 export const DescriptionText = styled.Text`
@@ -30,10 +28,10 @@ color: #D0D1D3;
 text-align: center;
 font-family: 'SF Pro Text';
 font-style: normal;
-font-size: 13px;
-padding-left: 20px;
-padding-right: 20px;
-margin-top: 20px;
+font-size: 17px;
+padding-left: 30px;
+padding-right: 30px;
+margin-top: 15px;
 `;
 
 export const ButtonArea = styled.TouchableOpacity`
@@ -43,7 +41,7 @@ height: 51px;
 border-radius: 12px;
 justify-content: center;
 align-items: center;
-margin-top: 20px;
+margin-top: 25px;
 margin-left: 20px;
 margin-right: 20px;
 `;
@@ -52,6 +50,6 @@ export const ButtonText = styled.Text`
 font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 18px;
 color: #151515;
 `;

@@ -12,22 +12,22 @@ position: absolute;
 width: 124px;
 height: 124px;
 left: 16px;
-top: 98px;
+top: 75px;
 `;
 
 export const ImageMelody = styled.Image`
 position: absolute;
 width: 140px;
 height: 140px;
-left: 223px;
-top: 609px;
+right: 16px;
+bottom: 25px;
 `;
 
 export const Title = styled.Text`
 color: #FFF6DA;
 font-family: 'SF Pro Text';
 font-style: normal;
-font-size: 19px;
+font-size: 26px;
 text-align: center;
 margin-top: 40px;
 `;
@@ -37,7 +37,7 @@ color: #D0D1D3;
 text-align: center;
 font-family: 'SF Pro Text';
 font-style: normal;
-font-size: 13px;
+font-size: 17px;
 padding-left: 40px;
 padding-right: 40px;
 margin-top: 20px;
@@ -59,7 +59,7 @@ export const ButtonText = styled.Text`
 font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 18px;
 color: #151515;
 `;
 
@@ -70,4 +70,5 @@ margin-bottom: 10px;
 
 export const LinkLoginText = styled.Text`
 color: #FFD345;
+font-size: 16px;
 `;

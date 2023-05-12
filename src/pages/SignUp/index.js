@@ -1,12 +1,31 @@
 import React from "react";
 import {View, Text} from 'react-native';
 
-import { Container } from "./styled";
+import { 
+    Container, 
+    Title,
+    Input,
+    Description,
+    ButtonArea,
+    ButtonText,
+
+} from "./styled";
 
 function SignUp(){
     return(
         <Container>
-            <Text>Screen SignUp</Text>
+            <Title>What’s your email?</Title>
+
+            <Input
+            placeholder="Your email"
+            />
+
+            <Description>You’ll be asked to confirm this later.</Description>
+
+            <ButtonArea>
+                <ButtonText>Continue</ButtonText>
+            </ButtonArea>
+
         </Container>
     )
 }
