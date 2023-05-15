@@ -5,13 +5,44 @@ flex: 1;
 background-color: #0d0d0d;
 `;
 
+export const HeaderRegister = styled.View`
+background-color: #0d0d0d;
+flex-direction: row;
+align-items: center;
+height: 55px;
+margin-top: 25px;
+margin-left: 20px;
+`;
+
+export const ArrowBack = styled.TouchableOpacity`
+
+`;
+
+export const ArrowBackIcon = styled.Image`
+width: 8px;
+height: 14px;
+`;
+
+export const AreaHeaderDoc = styled.View`
+flex-direction: row;
+margin-left: 35%;
+justify-content: center;
+align-items: center;
+`;
+
+export const HeaderDoc = styled.Image`
+width: 8px;
+height: 8px;
+margin-left: 14px;
+`;
+
 export const Title = styled.Text`
 font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
 font-size: 22px;
 color: #FFD345;
-margin-top: 5px;
+margin-top: 10px;
 margin-bottom: 20px;
 left: 20px;
 right: 20px;
@@ -49,7 +80,7 @@ margin-top: 25px;
 margin-left: 20px;
 margin-right: 20px;
 position: absolute;
-top: 40%;
+top: 50%;
 `;
 
 export const ButtonText = styled.Text`

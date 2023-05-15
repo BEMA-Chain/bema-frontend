@@ -15,7 +15,7 @@ function AuthRoutes(){
                 name="Started"
                 component={Started}
                 options={{
-                    headerShown: false
+                    headerShown: false,
                 }}
             />
 
@@ -31,7 +31,7 @@ function AuthRoutes(){
                 name="SignUp"
                 component={SignUp}
                 options={{
-                    headerStyle: { backgroundColor: '#0d0d0d' },
+                    headerShown: false
                 }}
             />    
 

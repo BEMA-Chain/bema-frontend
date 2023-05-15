@@ -18,7 +18,7 @@ function Access(){
 
     return(
         <Container>
-            <ImagePlay source={require('../../assets/LP-Play-Plastic-Black.png')} />
+            <ImagePlay source={require('../../assets/PlayIcons.png')} />
 
             <Title>Non euismod senectus vitae</Title>
 
@@ -35,7 +35,7 @@ function Access(){
                 <LinkLoginText>Log in</LinkLoginText>
             </LinkLogin>
 
-            <ImageMelody source={require('../../assets/Lp-Melody-Plastic_Black.png')} />
+            <ImageMelody source={require('../../assets/MelodyIcons.png')} />
         </Container>
     )
 }

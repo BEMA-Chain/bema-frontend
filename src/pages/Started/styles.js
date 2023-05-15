@@ -20,7 +20,7 @@ font-family: 'SF Pro Text';
 font-style: normal;
 font-size: 26px;
 text-align: center;
-margin-top: 30px;
+margin-top: 20px;
 `;
 
 export const DescriptionText = styled.Text`
