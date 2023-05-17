@@ -27,11 +27,17 @@ function Access(){
                 Quam quis iaculis tristique quis
             </DescriptionText>
 
-            <ButtonArea onPress={() => navigation.navigate('SignUp') } >
+            <ButtonArea 
+            onPress={() => navigation.navigate('SignUp') } 
+            activeOpacity={0.6}
+            >
                 <ButtonText>Register</ButtonText>
             </ButtonArea>
 
-            <LinkLogin onPress={() => navigation.navigate('SignIn') } >
+            <LinkLogin 
+            onPress={() => navigation.navigate('SignIn') } 
+            activeOpacity={0.6}
+            >
                 <LinkLoginText>Log in</LinkLoginText>
             </LinkLogin>
 

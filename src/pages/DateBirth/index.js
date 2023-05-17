@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, } from 'react-native';
+import {View, Text, StyleSheet } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -19,7 +19,7 @@ import {
 } from "./styles";
 
 
-function SignUp(){
+function DateBirth(){
     const navigation = useNavigation();
     const [emailRegister, setEmailRegister] = useState('');
 
@@ -33,32 +33,36 @@ function SignUp(){
                     <ArrowBackIcon source={require('../../assets/ArrowBack.png')} />
                 </ArrowBack>
                 <AreaHeaderDoc>
+                    <HeaderDoc 
+                    source={require('../../assets/Ellipse1.png')} 
+                    style={{tintColor: '#FFD345'}}
+                    />
+                    <HeaderDoc 
+                    source={require('../../assets/Ellipse1.png')} 
+                    style={{tintColor: '#FFD345'}}
+                    />
                     <Feather 
-                    name='mail' 
+                    name='calendar' 
                     size={16} 
                     color='#fff' 
-                    style={{color: '#FFD345'}} />
-                    <HeaderDoc source={require('../../assets/Ellipse1.png')} />
-                    <HeaderDoc source={require('../../assets/Ellipse1.png')} />
+                    style={styles.Icon} />
                     <HeaderDoc source={require('../../assets/Ellipse1.png')} />
                 </AreaHeaderDoc>
             </HeaderRegister>
 
             
             
-            <Title>What’s your email?</Title>
+            <Title>Date of birth.</Title>
 
             <Input
             onChangeText={setEmailRegister}
             value={emailRegister}
-            placeholder="Your email"
+            placeholder="DD/MM/YY"
+            keyboardType="numeric"
             />
-
-            <Description>You’ll be asked to confirm this later.</Description>
-
-            
+    
             <ButtonArea
-            onPress={() => navigation.navigate('PassWord') }
+            onPress={() => navigation.navigate('SetProfile') }
             activeOpacity={0.6}
             >
                 <ButtonText>Continue</ButtonText>
@@ -68,4 +72,11 @@ function SignUp(){
     )
 }
 
-export default SignUp;
+const styles = StyleSheet.create({
+    Icon:{
+        color: '#FFD345',
+        marginLeft: 14,
+    }
+})
+
+export default DateBirth;

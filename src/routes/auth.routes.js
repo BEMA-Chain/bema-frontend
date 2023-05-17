@@ -5,6 +5,9 @@ import Started from "../pages/Started";
 import Access from "../pages/Access";
 import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
+import PassWord from "../pages/PassWord";
+import DateBirth from "../pages/DateBirth";
+import SetProfile from "../pages/SetProfile";
 
 const AuthStack = createNativeStackNavigator();
 
@@ -33,7 +36,31 @@ function AuthRoutes(){
                 options={{
                     headerShown: false
                 }}
+            /> 
+
+            <AuthStack.Screen
+                name="PassWord"
+                component={PassWord}
+                options={{
+                    headerShown: false
+                }}
             />    
+
+            <AuthStack.Screen
+                name="DateBirth"
+                component={DateBirth}
+                options={{
+                    headerShown: false
+                }}
+            /> 
+
+            <AuthStack.Screen
+                name="SetProfile"
+                component={SetProfile}
+                options={{
+                    headerShown: false
+                }}
+            /> 
 
             <AuthStack.Screen
                 name="SignIn"

@@ -10,7 +10,6 @@ import {
     DescriptionText,
     ButtonArea,
     ButtonText,
-    Rectangle,
 } from "./styles";
 
 function Started(){
@@ -20,7 +19,7 @@ function Started(){
         <Container>
             
             <Image 
-            source={require('../../assets/Rectangle1.png')} 
+            source={require('../../assets/PhotoStarted.png')} 
             style={{resizeMode: 'cover'}}
             /> 
         
@@ -33,7 +32,10 @@ function Started(){
                     Quam quis iaculis tristique quis pellentesque gravida ac.
                 </DescriptionText>
 
-                <ButtonArea onPress={() => navigation.navigate('Access') }>
+                <ButtonArea 
+                onPress={() => navigation.navigate('Access') }
+                activeOpacity={0.6}
+                >
                     <ButtonText>Get started</ButtonText>
                 </ButtonArea>
                     

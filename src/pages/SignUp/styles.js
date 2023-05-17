@@ -6,6 +6,7 @@ background-color: #0d0d0d;
 `;
 
 export const HeaderRegister = styled.View`
+width: 100%;
 background-color: #0d0d0d;
 flex-direction: row;
 align-items: center;
@@ -15,7 +16,10 @@ margin-left: 20px;
 `;
 
 export const ArrowBack = styled.TouchableOpacity`
-
+width: 5%;
+height: 55px;
+justify-content: center;
+align-items: center;
 `;
 
 export const ArrowBackIcon = styled.Image`
@@ -24,8 +28,9 @@ height: 14px;
 `;
 
 export const AreaHeaderDoc = styled.View`
+width: 85%;
+height: 55px;
 flex-direction: row;
-margin-left: 35%;
 justify-content: center;
 align-items: center;
 `;
@@ -76,11 +81,9 @@ height: 51px;
 border-radius: 12px;
 justify-content: center;
 align-items: center;
-margin-top: 25px;
+margin-top: 38%;
 margin-left: 20px;
 margin-right: 20px;
-position: absolute;
-top: 50%;
 `;
 
 export const ButtonText = styled.Text`

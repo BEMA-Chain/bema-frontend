@@ -6,7 +6,7 @@ flex: 1;
 
 export const AreaText = styled.View`
 flex: 2;
-background-color: #0D0D0D;
+background-color: #0d0d0d;
 `;
 
 export const Image = styled.Image`
@@ -20,7 +20,7 @@ font-family: 'SF Pro Text';
 font-style: normal;
 font-size: 26px;
 text-align: center;
-margin-top: 20px;
+margin-top: 13px;
 `;
 
 export const DescriptionText = styled.Text`
@@ -31,7 +31,7 @@ font-style: normal;
 font-size: 17px;
 padding-left: 30px;
 padding-right: 30px;
-margin-top: 15px;
+margin-top: 20px;
 `;
 
 export const ButtonArea = styled.TouchableOpacity`
