@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import {View, Text, } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import Feather from 'react-native-vector-icons/Feather';
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 import { 
     Container, 
@@ -15,13 +17,23 @@ import {
     ArrowBack,
     ArrowBackIcon,
     AreaHeaderDoc,
-
+    TextError
 } from "./styles";
 
+const schema = yup.object({
+    email: yup.string().email('Email Inválido').required('Informe seu email')
+})
 
 function SignUp(){
     const navigation = useNavigation();
-    const [emailRegister, setEmailRegister] = useState('');
+    const { control, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    function handleEmail(data){
+        console.log(data);
+        navigation.navigate('SignUpPass')
+    }
 
     return(
         <Container>
@@ -48,17 +60,26 @@ function SignUp(){
             
             <Title>What’s your email?</Title>
 
-            <Input
-            onChangeText={setEmailRegister}
-            value={emailRegister}
-            placeholder="Your email"
+            <Controller
+            control={control}
+            name="email"
+            render={({ field: {onChange, onBlur, value} }) => (
+                <Input
+                    onChangeText={onChange}
+                    onBlur={onBlur}
+                    value={value}
+                    placeholder="Your email"
+                />
+            )}
             />
+
+            {errors.email && <TextError>{errors.email?.message}</TextError>}
 
             <Description>You’ll be asked to confirm this later.</Description>
 
             
             <ButtonArea
-            onPress={() => navigation.navigate('PassWord') }
+            onPress={ handleSubmit(handleEmail) } 
             activeOpacity={0.6}
             >
                 <ButtonText>Continue</ButtonText>

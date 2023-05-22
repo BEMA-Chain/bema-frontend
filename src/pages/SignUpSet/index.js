@@ -20,7 +20,7 @@ import {
 } from "./styles";
 
 
-function SetProfile(){
+function SignUpSet(){
     const navigation = useNavigation();
     const [emailRegister, setEmailRegister] = useState('');
 
@@ -89,4 +89,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SetProfile;
+export default SignUpSet;

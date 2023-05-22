@@ -2,6 +2,11 @@ import React, {useState} from "react";
 import {View, Text, StyleSheet } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import Feather from 'react-native-vector-icons/Feather';
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { TextInputMask } from "react-native-masked-text";
+
 
 import { 
     Container, 
@@ -15,13 +20,24 @@ import {
     ArrowBack,
     ArrowBackIcon,
     AreaHeaderDoc,
+    TextError,
 
 } from "./styles";
 
+const schema = yup.object({
+    date: yup.string().required('inform your birth')
+})
 
-function DateBirth(){
+function SignUpBirth(){
     const navigation = useNavigation();
-    const [emailRegister, setEmailRegister] = useState('');
+    const { control, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    function handleBirth(data){
+        console.log(data);
+        navigation.navigate('SignUpSet')
+    }
 
     return(
         <Container>
@@ -54,15 +70,31 @@ function DateBirth(){
             
             <Title>Date of birth.</Title>
 
-            <Input
-            onChangeText={setEmailRegister}
-            value={emailRegister}
-            placeholder="DD/MM/YY"
-            keyboardType="numeric"
+            <Controller
+            control={control}
+            name="date"
+            render={({ field: {onChange, onBlur, value} }) => (
+                <TextInputMask
+                style={styles.input}
+                type={'datetime'}
+                options={{
+                  format: 'DD/MM/YYYY'
+                }}
+                    onChangeText={onChange}
+                    onBlur={onBlur}
+                    value={value}
+                    placeholder="DD/MM/YYYY"
+                    keyboardType="numeric"
+                     
+                />
+                
+            )}
             />
+
+            {errors.date && <TextError>{errors.date?.message}</TextError>}
     
             <ButtonArea
-            onPress={() => navigation.navigate('SetProfile') }
+            onPress={ handleSubmit(handleBirth) }
             activeOpacity={0.6}
             >
                 <ButtonText>Continue</ButtonText>
@@ -76,7 +108,17 @@ const styles = StyleSheet.create({
     Icon:{
         color: '#FFD345',
         marginLeft: 14,
+    },
+    input:{
+        backgroundColor: '#F5F5F5',
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 5,
+        marginLeft: 20,
+        marginRight: 20,
+        fontSize: 18,
+        color: '#2F2F2F',
     }
 })
 
-export default DateBirth;
+export default SignUpBirth;
