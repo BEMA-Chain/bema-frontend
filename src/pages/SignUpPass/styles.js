@@ -5,7 +5,7 @@ flex: 1;
 background-color: #0D0D0D;
 `;
 
-export const HeaderRegister = styled.View`
+export const HeaderRegister = styled.SafeAreaView`
 width: 100%;
 background-color: #0d0d0d;
 flex-direction: row;

@@ -27,7 +27,7 @@ width: 8px;
 height: 14px;
 `;
 
-export const AreaHeaderDoc = styled.View`
+export const AreaHeaderTitle = styled.View`
 width: 80%;
 height: 70px;
 flex-direction: row;
@@ -35,10 +35,12 @@ justify-content: center;
 align-items: center;
 `;
 
-export const HeaderDoc = styled.Image`
-width: 8px;
-height: 8px;
-margin-left: 14px;
+export const HeaderTitle = styled.Text`
+color: #FFD345;
+font-family: 'SF Pro Text';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
 `;
 
 export const Title = styled.Text`
@@ -46,7 +48,7 @@ font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
 font-size: 22px;
-color: #FFD345;
+color: #D0D1D3;
 margin-bottom: 20px;
 left: 20px;
 right: 20px;

@@ -3,8 +3,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Started from "../pages/Started";
 import Access from "../pages/Access";
-import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
+import SignInEmail from "../pages/SignInEmail";
+import SignInEmailCheck from "../pages/SignInEmailCheck";
+import SignUp from "../pages/SignUp";
 import SignUpPass from "../pages/SignUpPass";
 import SignUpBirth from "../pages/SignUpBirth";
 import SignUpSet from "../pages/SignUpSet";
@@ -65,6 +67,22 @@ function AuthRoutes(){
             <AuthStack.Screen
                 name="SignIn"
                 component={SignIn}
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <AuthStack.Screen
+                name="SignInEmail"
+                component={SignInEmail}
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <AuthStack.Screen
+                name="SignInEmailCheck"
+                component={SignInEmailCheck}
                 options={{
                     headerShown: false
                 }}

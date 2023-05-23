@@ -5,7 +5,7 @@ flex: 1;
 background-color: #0D0D0D;
 `;
 
-export const HeaderRegister = styled.View`
+export const HeaderRegister = styled.SafeAreaView`
 width: 100%;
 background-color: #0d0d0d;
 flex-direction: row;
@@ -27,7 +27,7 @@ width: 8px;
 height: 14px;
 `;
 
-export const AreaHeaderDoc = styled.View`
+export const AreaHeaderTitle = styled.View`
 width: 80%;
 height: 70px;
 flex-direction: row;
@@ -109,12 +109,6 @@ font-size: 18px;
 color: #151515;
 `;
 
-export const TextError = styled.Text`
-color: #ff375b;
-margin-bottom: 8px;
-margin-left: 20px;
-margin-right: 20px;
-`;
 
 export const LinkLogin =styled.TouchableOpacity`
 margin-top: 10px;

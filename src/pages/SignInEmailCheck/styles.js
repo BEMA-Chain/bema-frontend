@@ -27,7 +27,7 @@ width: 8px;
 height: 14px;
 `;
 
-export const AreaHeaderDoc = styled.View`
+export const AreaHeaderTitle = styled.View`
 width: 80%;
 height: 70px;
 flex-direction: row;
@@ -35,42 +35,23 @@ justify-content: center;
 align-items: center;
 `;
 
-export const HeaderDoc = styled.Image`
-width: 8px;
-height: 8px;
-margin-left: 14px;
-`;
-
-export const Title = styled.Text`
+export const HeaderTitle = styled.Text`
+color: #FFD345;
 font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
-font-size: 22px;
-color: #FFD345;
-margin-bottom: 20px;
-left: 20px;
-right: 20px;
-`;
-
-export const Input = styled.TextInput`
-background: #F5F5F5;
-border-radius: 12px;
-padding: 16px;
-margin-bottom: 5px;
-margin-left: 20px;
-margin-right: 20px;
 font-size: 18px;
-color: #2F2F2F;
 `;
 
 export const Description = styled.Text`
 color: #D0D1D3;
 font-family: 'SF Pro Text';
 font-style: normal;
-font-weight: 500;
-font-size: 13px;
+font-weight: 400;
+font-size: 16px;
 line-height: 16px;
 margin-left: 20px;
+margin-right: 20px;
 `;
 
 export const ButtonArea = styled.TouchableOpacity`
@@ -91,11 +72,4 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 color: #151515;
-`;
-
-export const TextError = styled.Text`
-color: #ff375b;
-margin-bottom: 8px;
-margin-left: 20px;
-margin-right: 20px;
 `;

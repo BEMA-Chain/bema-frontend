@@ -15,7 +15,7 @@ import {
     HeaderTitle,
     ArrowBack,
     ArrowBackIcon,
-    AreaHeaderDoc,
+    AreaHeaderTitle,
     AreaInput,
     AreaIcon,
     LinkLogin,
@@ -29,7 +29,6 @@ function SignIn(){
 
     function handlePassWord(data){
         console.log(data);
-        navigation.navigate('SignUpBirth')
     }
 
     return(
@@ -41,9 +40,9 @@ function SignIn(){
                 >
                     <ArrowBackIcon source={require('../../assets/ArrowBack.png')} />
                 </ArrowBack>
-                <AreaHeaderDoc>
+                <AreaHeaderTitle>
                     <HeaderTitle>Welcome back</HeaderTitle>
-                </AreaHeaderDoc>
+                </AreaHeaderTitle>
             </HeaderRegister>
 
             <Title>Email</Title>
@@ -87,7 +86,7 @@ function SignIn(){
             </ButtonArea>
 
             <LinkLogin 
-            onPress={() => navigation.navigate('SignIn') } 
+            onPress={() => navigation.navigate('SignInEmail') } 
             activeOpacity={0.6}
             >
                 <LinkLoginText>Log in without password</LinkLoginText>
