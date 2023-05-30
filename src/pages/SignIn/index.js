@@ -26,9 +26,12 @@ import {
 function SignIn(){
     const navigation = useNavigation();
     const [hidePass, setHidePass] = useState(true);
+    const [email, setEmail] = useState('');
+    const [passWord, setPassWord] = useState('');
 
-    function handlePassWord(data){
-        console.log(data);
+    function handlePassWord(){
+        console.log("email: ", email)
+        console.log("PassWord: ", passWord)
     }
 
     return(
@@ -51,6 +54,8 @@ function SignIn(){
 
             <Email
                 placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
             />
 
             </AreaInput>
@@ -61,6 +66,8 @@ function SignIn(){
 
                 <Input
                     placeholder="Password"
+                    value={passWord}
+                    onChangeText={setPassWord}
                     secureTextEntry={hidePass}
                 />
 

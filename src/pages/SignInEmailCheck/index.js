@@ -11,6 +11,7 @@ import {
     ArrowBackIcon,
     AreaHeaderTitle,
     HeaderTitle,
+    ButtonView
 } from "./styles";
 
 function SignInEmailCheck(){
@@ -42,7 +43,6 @@ function SignInEmailCheck(){
                 that will log you into your account.
             </Description>
 
-            
             <ButtonArea
             onPress={ handleEmail } 
             activeOpacity={0.6}

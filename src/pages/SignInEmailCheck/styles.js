@@ -61,7 +61,7 @@ height: 51px;
 border-radius: 12px;
 justify-content: center;
 align-items: center;
-margin-top: 38%;
+margin-top: 63%;
 margin-left: 20px;
 margin-right: 20px;
 `;

@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import {View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import Feather from 'react-native-vector-icons/Feather';
+
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { 
     Container, 
@@ -16,13 +18,29 @@ import {
     ArrowBackIcon,
     AreaHeaderDoc,
     Body,
+    TextError,
 
 } from "./styles";
 
-
 function SignUpSet(){
     const navigation = useNavigation();
-    const [emailRegister, setEmailRegister] = useState('');
+    const [email, setEmail] = useState('');
+    const [firstEmail, setFirstEmail] = useState('');
+    const [firstEmailCheck, setFirstEmailCheck] = useState(false);
+
+
+    async function handleEmailSet(){
+        const getEmail = await AsyncStorage.getItem('@setEmail')
+
+        if(getEmail){
+            setFirstEmail(JSON.parse(getEmail))
+        }
+        setFirstEmailCheck(true)
+
+        console.log(firstEmailCheck)
+        console.log(firstEmail)
+        console.log(email)
+    }
 
     return(
         <Container>
@@ -59,22 +77,29 @@ function SignUpSet(){
                 <Title>Set up your profile.</Title>
 
                 <Input
-                onChangeText={setEmailRegister}
-                value={emailRegister}
-                placeholder="Your email"
+                    onChangeText={setEmail}
+                    value={email}
+                    placeholder="Your email"
                 />
+            
+                
+                 <TextError></TextError>
 
                 <Description>
                     By signing up, you agree to our Terms and conditions 
                     and Privacy policies.
                 </Description>
-        
+
+                
                 <ButtonArea
-                onPress={() => navigation.navigate('Started') }
+                onPress={handleEmailSet}
                 activeOpacity={0.6}
                 >
                     <ButtonText>Continue</ButtonText>
                 </ButtonArea>
+               
+
+                
 
             </Body>
 

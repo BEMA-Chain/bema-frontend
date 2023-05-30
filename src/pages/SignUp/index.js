@@ -5,6 +5,8 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { 
     Container, 
     Title,
@@ -30,8 +32,9 @@ function SignUp(){
         resolver: yupResolver(schema)
     });
 
-    function handleEmail(data){
-        console.log(data);
+    async function handleEmail(data){
+        await AsyncStorage.setItem('@setEmail', JSON.stringify(data.email))
+        console.log(data.email);
         navigation.navigate('SignUpPass')
     }
 

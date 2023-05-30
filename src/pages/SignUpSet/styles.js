@@ -96,3 +96,10 @@ font-weight: 500;
 font-size: 18px;
 color: #151515;
 `;
+
+export const TextError = styled.Text`
+color: #ff375b;
+margin-bottom: 8px;
+margin-left: 20px;
+margin-right: 20px;
+`;
