@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import Feather from 'react-native-vector-icons/Feather';
@@ -29,20 +29,44 @@ function SignUpSet(){
     const [firstEmailCheck, setFirstEmailCheck] = useState(false);
 
 
-    async function handleEmailSet(){
-        const getEmail = await AsyncStorage.getItem('@setEmail')
+    useEffect(() => {
+        async function getFirstEmail(){
+            const getEmail = await AsyncStorage.getItem('@setEmail')
 
-        if(getEmail){
-            setFirstEmail(JSON.parse(getEmail))
+            if(getEmail){
+                setFirstEmail(JSON.parse(getEmail))
+            }
         }
-        setFirstEmailCheck(true)
+        getFirstEmail();
+    }, [])
 
-        console.log(firstEmailCheck)
-        console.log(firstEmail)
-        console.log(email)
+    async function handleEmailSet(){
+        
+        if(firstEmail !== email){
+            setFirstEmailCheck(true);
+        }else{
+            navigation.navigate('Access')
+        }
+        
+    }
+
+    if(firstEmail === ''){
+        return(
+            <View
+            style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: '#0d0d0d'
+            }}
+            >
+                <ActivityIndicator size={50} color='#FFD345' />
+            </View>
+        )
     }
 
     return(
+        
         <Container>
             <HeaderRegister>
                 <ArrowBack 
@@ -82,24 +106,23 @@ function SignUpSet(){
                     placeholder="Your email"
                 />
             
-                
-                 <TextError></TextError>
+                {firstEmailCheck ? (
+                    <TextError>The emails need to be the same</TextError>
+                ):(
+                    ''
+                )} 
 
                 <Description>
                     By signing up, you agree to our Terms and conditions 
                     and Privacy policies.
                 </Description>
 
-                
                 <ButtonArea
                 onPress={handleEmailSet}
                 activeOpacity={0.6}
                 >
                     <ButtonText>Continue</ButtonText>
-                </ButtonArea>
-               
-
-                
+                </ButtonArea>  
 
             </Body>
 
