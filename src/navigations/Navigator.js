@@ -1,9 +1,11 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../pages/Home'
+import Detail from '../screens/Detail'
 import Favourite from '../screens/Favourite'
 import Profile from '../screens/Profile'
+import {Image} from 'react-native'
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -64,18 +66,18 @@ const BottomTabNavigator = () => {
 };
 
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 const screenOptionStyle = {
     headerShown: false
 }
 
-const AppRoutesNavigator = () => {
+const HomeStackNavigator = () => {
     return(
         <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="Home" component={Home}/>
-            {/* <Stack.Screen name="Detail" component={Detail}/> */}
+            <Stack.Screen name="Home" component={BottomTabNavigator}/>
+            <Stack.Screen name="Detail" component={Detail}/>
         </Stack.Navigator>
     )
 }
 
-export default AppRoutesNavigator;
+export default HomeStackNavigator;

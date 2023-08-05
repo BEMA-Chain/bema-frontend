@@ -32,6 +32,7 @@ function SignIn(){
     function handlePassWord(){
         console.log("email: ", email)
         console.log("PassWord: ", passWord)
+        navigation.navigate('Home')
     }
 
     return(

@@ -20,7 +20,7 @@ function SignInEmailCheck(){
 
     function handleEmail(data){
         console.log(data);
-        navigation.navigate('')
+        navigation.navigate('Home')
     }
 
     return(
