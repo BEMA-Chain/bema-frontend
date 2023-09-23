@@ -2,13 +2,15 @@ import React from 'react';
 import { View } from 'react-native';
 
 import AuthRoutes from './auth.routes';
+import BottomTabNavigator from './app.routes';
 
 function Routes(){
     const loading = false;
-    const signed = false;
+    const signed = true;
 
     return(
-        signed ? <View></View> : <AuthRoutes/>
+        <AuthRoutes />
+        // signed ? <BottomTabNavigator /> : <AuthRoutes/>
     )
 }
 

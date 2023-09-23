@@ -72,7 +72,7 @@ const Profile = () => {
                 </ProfileActionItems>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Help')}>
                 <ProfileActionItems>
                     <ProfileItemsImage
                         source={require(`../../assets/HelpCircle.png`)}
