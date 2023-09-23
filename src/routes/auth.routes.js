@@ -15,6 +15,7 @@ import History from "../pages/History";
 import Settings from "../pages/Settings";
 import Aboutus from "../pages/Aboutus";
 import Help from "../pages/Help";
+import HelpDetails from "../pages/HelpDetails";
 
 const AuthStack = createNativeStackNavigator();
 
@@ -138,6 +139,14 @@ function AuthRoutes() {
                 <AuthStack.Screen
                     name="Help"
                     component={Help}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="HelpDetails"
+                    component={HelpDetails}
                     options={{
                         headerShown: false
                     }}
