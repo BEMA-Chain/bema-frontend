@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
     Container,
     HeaderRegister,
@@ -37,6 +38,7 @@ const helpList = [
 ];
 
 const Help = () => {
+    const navigation = useNavigation();
     const [searchText, setSearchText] = useState('');
     return (
         <Container>
