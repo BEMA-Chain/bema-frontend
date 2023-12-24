@@ -16,6 +16,8 @@ import {
   HistoryTextContainer,
   HistoryTitle
 } from './styles';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
+import RecentlyStreamed from '../RecentlyStreamed';
 
 const historyList = [
   { id: 1, title: "Laiba Nadeem", description: "Artist" },
@@ -29,7 +31,7 @@ const History = () => {
   const navigation = useNavigation();
   return (
     <Container>
-      <ScrollView>
+      <ScrollView style={{ marginBottom: 90 }}>
         <HeaderRegister>
           <ArrowBack
             onPress={() => { navigation.goBack() }}
@@ -98,7 +100,10 @@ const History = () => {
             </HistoryList>
           </HistoryListContainer>
         ))}
+
+        <RecentlyStreamed />
       </ScrollView>
+      <CustomBottomTabs />
     </Container>
   )
 };

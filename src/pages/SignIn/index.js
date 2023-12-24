@@ -30,9 +30,7 @@ function SignIn(){
     const [passWord, setPassWord] = useState('');
 
     function handlePassWord(){
-        console.log("email: ", email)
-        console.log("PassWord: ", passWord)
-        navigation.navigate('Home')
+        navigation.navigate('Home');
     }
 
     return(

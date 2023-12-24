@@ -17,6 +17,7 @@ import {
     ProfileActionItemText
 } from "./styles";
 import { TouchableOpacity } from 'react-native';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 
 const Profile = () => {
     const navigation = useNavigation();
@@ -54,7 +55,7 @@ const Profile = () => {
                 </ProfileList>
             </ProfileListContainer>
             {/* profile list */}
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Wallet')}>
                 <ProfileActionItems>
                     <ProfileItemsImage
                         source={require(`../../assets/CreditCard.png`)}
@@ -98,7 +99,7 @@ const Profile = () => {
                     <ProfileActionItemText>Logout</ProfileActionItemText>
                 </ProfileActionItems>
             </TouchableOpacity>
-
+            <CustomBottomTabs />
         </Container>
     )
 };

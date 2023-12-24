@@ -15,6 +15,7 @@ import {
   PushNotificationContainer,
   SettingsLabelHeading
 } from './styles';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 // import { Dropdown } from 'react-native-element-dropdown';
 
 const languageData = [
@@ -90,6 +91,7 @@ const Settings = () => {
           About us
         </SettingsLabelHeading>
       </TouchableOpacity>
+      <CustomBottomTabs />
     </Container>
   )
 }

@@ -21,6 +21,7 @@ import {
   RecommendationTitle
 } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 
 const recentlyPlayedList = [
   { id: 1, title: 'Song Title', description: "Artist" },
@@ -115,6 +116,7 @@ const Home = () => {
           </RecentlyPlayedContainer>
         </ScrollView>
       </HomeScroll>
+      <CustomBottomTabs />
     </Container>
 
   )

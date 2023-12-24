@@ -1,13 +1,14 @@
 import { AreaHeaderTitle, ArrowBack, ArrowBackIcon, Container, FeedbackButton, FeedbackButtonContainer, FeedbackText, HeaderRegister, HeaderTitle, HelpDescription, HelpTitle, HelpfulContainer, HelpfulText } from './styles';
 import { ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 
 const HelpDetails = ({ route }) => {
     const navigation = useNavigation();
     const { item } = route.params;
     return (
         <Container>
-            <ScrollView>
+            <ScrollView style={{ marginBottom: 90 }}>
                 <HeaderRegister>
                     <ArrowBack
                         onPress={() => { navigation.goBack() }}
@@ -36,6 +37,7 @@ const HelpDetails = ({ route }) => {
                     </FeedbackButton>
                 </FeedbackButtonContainer>
             </ScrollView>
+            <CustomBottomTabs />
         </Container>
     )
 };

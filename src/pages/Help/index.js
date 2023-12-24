@@ -18,6 +18,7 @@ import {
     HelpTextContainer,
     HelpTitle
 } from './styles';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 
 const helpList = [
     {
@@ -47,7 +48,7 @@ const Help = () => {
     const [searchText, setSearchText] = useState('');
     return (
         <Container>
-            <ScrollView>
+            <ScrollView style={{ marginBottom: 90 }}>
                 <HeaderRegister>
                     <ArrowBack
                         onPress={() => { navigation.goBack() }}
@@ -89,6 +90,7 @@ const Help = () => {
                     ))
                 }
             </ScrollView>
+            <CustomBottomTabs />
         </Container >
     )
 };

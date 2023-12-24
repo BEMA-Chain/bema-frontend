@@ -16,6 +16,14 @@ import Settings from "../pages/Settings";
 import Aboutus from "../pages/Aboutus";
 import Help from "../pages/Help";
 import HelpDetails from "../pages/HelpDetails";
+import Library from "../pages/Library";
+import Playlists from "../pages/PlayLists";
+import Albums from "../pages/Albums";
+import Songs from "../pages/Songs";
+import AlbumDetails from "../pages/AlbumDetails";
+import Wallet from "../pages/Wallet";
+import Search from "../pages/Search";
+import RecentlyStreamed from "../pages/RecentlyStreamed";
 
 const AuthStack = createNativeStackNavigator();
 
@@ -152,8 +160,71 @@ function AuthRoutes() {
                     }}
                 />
 
+                <AuthStack.Screen
+                    name="Library"
+                    component={Library}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="PlayLists"
+                    component={Playlists}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="Albums"
+                    component={Albums}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="Songs"
+                    component={Songs}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="AlbumDetails"
+                    component={AlbumDetails}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="Wallet"
+                    component={Wallet}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="Search"
+                    component={Search}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <AuthStack.Screen
+                    name="RecentlyStreamed"
+                    component={RecentlyStreamed}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
             </AuthStack.Navigator>
-            {/* <AppRoutesNavigator /> */}
         </>
     )
 }

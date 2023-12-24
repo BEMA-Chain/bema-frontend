@@ -10,6 +10,7 @@ import {
   HeaderRegister,
   HeaderTitle
 } from './styles';
+import CustomBottomTabs from '../../sharedComponents/CustomBottomTabs';
 
 const aboutUsList = [
   {
@@ -56,6 +57,7 @@ const Aboutus = () => {
           <AboutUsListDescription>{aboutusItem.description}</AboutUsListDescription>
         </AboutusList>
       ))}
+      <CustomBottomTabs />
     </Container>
   )
 };
