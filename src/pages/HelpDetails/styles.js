@@ -82,10 +82,10 @@ justify-content: center;
 `;
 
 export const FeedbackButton = styled.TouchableOpacity`
-padding-vertical: 5px;
-padding-horizontal: 10px;
-margin-horizontal: 10px;
-border-color: #FFD345;
+padding-vertical: 2px;
+padding-horizontal: 6px;
+margin-horizontal: 6px;
+border: 2px solid #FFD345;
 padding: 10px;
 border-radius: 12px;
 `;
@@ -96,6 +96,6 @@ font-family: 'SF Pro Text';
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
-margin: 20px;
+margin: 10px 20px;
 line-height: 20px;
 `;

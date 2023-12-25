@@ -91,7 +91,7 @@ const Profile = () => {
                 </ProfileActionItems>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
                 <ProfileActionItems>
                     <ProfileItemsImage
                         source={require(`../../assets/Logout.png`)}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, SearchScroll, PlaylistContainer, PlaylistText, AreaInput, SearchInput } from "./styles";
 import SharedCard from "../../sharedComponents/SharedCards";
 import CustomBottomTabs from "../../sharedComponents/CustomBottomTabs";
+import AutocompleteSearch from "../../sharedComponents/Autocomplete";
 
 const data = [
     { id: '1', title: 'Item 1', description: 'Description Item 1', image: require('../../assets/MaskGroup.png') },
