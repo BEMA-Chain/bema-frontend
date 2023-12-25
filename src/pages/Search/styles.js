@@ -8,7 +8,7 @@ background-color: #0D0D0D;
 export const SearchScroll = styled.ScrollView`
 margin-top : 40px;
 padding: 10px;
-margin-bottom: 90
+margin-bottom: 90px;
 `;
 
 export const PlaylistContainer = styled.View`
