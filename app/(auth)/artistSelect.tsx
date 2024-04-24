@@ -1,41 +1,68 @@
 import Email from '@/assets/icons/email'
 import Back from '@/components/utils/Back'
 import { Link } from 'expo-router'
-import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, TextInput, Image, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 type Props = {}
 const Screen = (props: Props) => {
     return (
-        <SafeAreaView className='h-full bg-primary px-6 py-10'>
-            <View className='flex-row '>
-                <Back />
-                <View className='justify-center  w-full items-center flex-row gap-x-3 '>
-                    <Email />
-                    <View className='h-2 w-2 bg-white rounded-full'>
-                    </View>
-                    <View className='h-2 w-2 bg-white rounded-full'>
-                    </View>
-                    <View className='h-2 w-2 bg-white rounded-full'>
-                    </View>
+        <SafeAreaView className='h-full bg-primary  py-10'>
+            <ScrollView className='px-6'>
+                <Text className='text-2xl text-secondary'>Choose 3 or more artists you like</Text>
+                <View className='py-10 flex-row flex-wrap justify-between gap-x-8 gap-y-16'>
 
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
+                    <View>
+                        <Image className='' source={require('../../assets/images/artist.png')} />
+                        <Text className='text-secondary text-center'>Wizkid</Text>
+                    </View>
                 </View>
-            </View>
-            <View className='py-6'>
-                <Text className='text-secondary text-2xl'>What's your email?</Text>
-            </View>
-            <TextInput
-                // style={styles.poppinsRegular}
-                placeholderTextColor="#151515"
-                placeholder="Email"
-                autoCapitalize="none"
-                autoCorrect={false}
-                underlineColorAndroid="transparent"
-                selectionColor="white"
-                maxLength={32}
-                className='  bg-[#F5F5F5]  p-5 rounded-xl text-base '
-            />
-            <Text className='text-blackText pt-1'>You'll be asked to confirm this later.</Text>
-            <Link className="bg-secondary text-base py-3 rounded-xl text-center mt-20" href={'/(auth)/email'}>Continue</Link>
+
+            </ScrollView>
+            <Link className="absolute left-[8%]  bottom-10 w-full bg-secondary  justify-center items-center text-base py-3 rounded-xl text-center max-w-[320px]" href={'/(home)/'}>Continue</Link>
 
 
         </SafeAreaView>

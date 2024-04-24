@@ -36,7 +36,7 @@ const Screen = (props: Props) => {
                 className='  bg-[#F5F5F5]  p-5 rounded-xl text-base '
             />
             <Text className='text-blackText pt-1'>By signing up, you agree to our Terms and conditions and Privacy policies. </Text>
-            <Link className="bg-secondary text-base py-3 rounded-xl text-center mt-40" href={'/(auth)/email'}>Sign up</Link>
+            <Link className="bg-secondary text-base py-3 rounded-xl text-center mt-40" href={'/artistSelect'}>Sign up</Link>
 
 
         </SafeAreaView>
