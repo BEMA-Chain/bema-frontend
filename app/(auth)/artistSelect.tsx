@@ -63,8 +63,6 @@ const Screen = (props: Props) => {
 
             </ScrollView>
             <Link className="absolute left-[8%]  bottom-10 w-full bg-secondary  justify-center items-center text-base py-3 rounded-xl text-center max-w-[320px]" href={'/(home)/'}>Continue</Link>
-
-
         </SafeAreaView>
     )
 }
