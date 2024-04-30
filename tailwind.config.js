@@ -10,6 +10,7 @@ module.exports = {
         secondary: '#FFD345',
         goldText: '#FFF6DA',
         blackText: '#D0D1D3',
+        grayText: '#B0B2B5',
       }
     },
   },

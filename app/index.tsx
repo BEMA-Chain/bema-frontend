@@ -6,7 +6,7 @@ import { useState } from "react";
 // import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 type Props = {}
-const index = (props: Props) => {
+const Index = (props: Props) => {
 
     return (
         <SafeAreaView className="flex-1 bg-primary">
@@ -23,7 +23,7 @@ const index = (props: Props) => {
 
                     <Text className="text-center text-2xl text-goldText pb-6">Non euismod senectus vitae</Text>
                     <Text className="text-center text-base text-blackText pb-10">Tincidunt sed consequat non velit adipiscing elementum. Quam quis iaculis tristique quis pellentesque gravida ac.</Text>
-                    <Link className="bg-secondary text-base py-3 rounded-xl text-center" href={'/(auth)'}>Get started</Link>
+                    <Link className="bg-secondary text-base py-3 rounded-xl text-center" href={'/(home)/(library)'}>Get started</Link>
                 </View>
 
 
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default index
+export default Index

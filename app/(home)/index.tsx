@@ -4,7 +4,7 @@ import SongPlaying from '@/components/songs/SongPlaying'
 import { View, Text, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 type Props = {}
-const index = (props: Props) => {
+const Index = (props: Props) => {
     return (
         <SafeAreaView className="flex-1 bg-primary">
             <ScrollView className=' flex-1 px-6 py-10'>
@@ -30,4 +30,4 @@ const index = (props: Props) => {
         </SafeAreaView>
     )
 }
-export default index
+export default Index

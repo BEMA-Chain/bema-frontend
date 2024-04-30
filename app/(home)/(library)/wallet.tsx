@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 type Props = {}
-const library = (props: Props) => {
+const Wallet = (props: Props) => {
     return (
         <View>
-            <Text>library</Text>
+            <Text>Wallet</Text>
         </View>
     )
 }
-export default library
+export default Wallet
