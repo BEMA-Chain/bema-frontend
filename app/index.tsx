@@ -23,7 +23,7 @@ const Index = (props: Props) => {
 
                     <Text className="text-center text-2xl text-goldText pb-6">Non euismod senectus vitae</Text>
                     <Text className="text-center text-base text-blackText pb-10">Tincidunt sed consequat non velit adipiscing elementum. Quam quis iaculis tristique quis pellentesque gravida ac.</Text>
-                    <Link className="bg-secondary text-base py-3 rounded-xl text-center" href={'/(home)/(library)'}>Get started</Link>
+                    <Link className="bg-secondary text-base py-3 rounded-xl text-center" href={'/(auth)'}>Get started</Link>
                 </View>
 
 

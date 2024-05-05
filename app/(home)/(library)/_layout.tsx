@@ -6,6 +6,9 @@ const layout = (props: Props) => {
         screenOptions={{
             headerShown: false,
         }}
-    />
+    >
+        <Stack.Screen name="Library" />
+
+    </Stack>
 }
 export default layout

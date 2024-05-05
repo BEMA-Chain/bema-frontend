@@ -38,7 +38,7 @@ const Screen = (props: Props) => {
                     maxLength={32}
                     className='  bg-[#F5F5F5]  p-5 rounded-xl text-base '
                 />
-                <Link className="bg-secondary text-base py-3 rounded-xl text-center mt-20" href={'/(home)/'}>Log in</Link>
+                <Link className="bg-secondary text-base py-3 rounded-xl text-center mt-20" href={'/(home)'}>Log in</Link>
                 <Link className=" text-base text-blackText pt-4 text-center " href={'/loginWithoutPwd'}>Log in without password</Link>
             </View>
 
